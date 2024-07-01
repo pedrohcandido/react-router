@@ -34,6 +34,10 @@ const FormQuestion = (props) => {
 		setName(event.target.value)
 	}
 
+	useEffect(() => {
+		localStorage.setItem("answers", JSON.stringify(answers));
+	}, [answers]);
+
 
 	return(
 		<div className="app">
