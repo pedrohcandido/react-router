@@ -1,16 +1,30 @@
 .app{
 	position: absolute;
-	top: 50%;
-	left: 55%;
-	transform: translate(-50%,-50%);
+	top: 25%;
+	left: 30%;
 	background-color: #363636;
 	padding: 15px;
 	border-radius: 15px;
 	width: 50%;
 	height: 70%;
-	color: white
+	color: white;
+	margin: auto;
+	margin-left: auto;
+	margin-right: auto;
 }
 #name{ 
 	width: 100%;
   clear: both;
+}
+
+.slider-container{
+	margin-left: auto;
+	margin-right: auto;
+	margin: auto;
+	width: 100%;
+}
+img{
+   margin: auto;
+	 width: 60%;
+	 margin-top: 50px;
 }

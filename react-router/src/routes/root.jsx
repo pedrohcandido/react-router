@@ -1,19 +1,32 @@
-import { Link, Outlet } from "react-router-dom";
+import { useState } from "react";
+import { Link, NavLink, Outlet } from "react-router-dom";
 
 export default function Root() {
+	const [menuOpen, setMenuOpen] = useState(false)
+
   return (
     <>
       <div id="sidebar">
         <nav>
-          <ul>
+					<Link to={"/"} className="title">
+					Home
+					</Link>
+					<div className="menu" onClick={() =>{
+						setMenuOpen(!menuOpen)
+					}}>
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+          <ul className={menuOpen ? "open" : ""}>
 						<li>
-								<Link to={"/slick"}>Carousel</Link>
+								<NavLink to={"/slick"}>Carousel</NavLink>
             </li>
 						<li>
-								<Link to={"/form"}>Formulário</Link>
+								<NavLink to={"/form"}>Formulário</NavLink>
             </li>
 						<li>
-								<Link to={"/answerList"}>Formulário Enviados</Link>
+								<NavLink to={"/answerList"}>Formulário Enviados</NavLink>
             </li>
           </ul>
         </nav>
